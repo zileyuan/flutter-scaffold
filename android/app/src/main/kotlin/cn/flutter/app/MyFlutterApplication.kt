@@ -1,4 +1,4 @@
-package cn.com.quantsoft.mobileqbms
+package cn.flutter.app
 
 import io.flutter.app.FlutterApplication
 import io.github.zileyuan.umeng_analytics_push.UmengAnalyticsPushFlutterAndroid
