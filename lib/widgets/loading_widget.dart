@@ -11,7 +11,7 @@ showLoading(BuildContext context, {text = "加载中..."}) {
 }
 
 class LoadingWidget extends StatelessWidget with ScreenUtil {
-  String text;
+  final String text;
 
   LoadingWidget({@required this.text});
 

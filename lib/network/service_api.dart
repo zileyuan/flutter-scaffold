@@ -25,5 +25,6 @@ class ServiceApi {
     } catch (e) {
       ErrorToastUtil.show(e, context);
     }
+    return null;
   }
 }

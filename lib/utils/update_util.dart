@@ -1,7 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:typed_data';
-import 'package:path_provider/path_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:app/models/update_model.dart';
 import 'package:app/widgets/update_widget.dart';
@@ -34,8 +32,8 @@ class UpdateUtil {
             lastRelease = release;
           }
         });
-        LogUtil.i('====maxBuild: ${maxBuild}');
-        LogUtil.i('====buildNumber: ${buildNumber}');
+        LogUtil.i('====maxBuild: $maxBuild');
+        LogUtil.i('====buildNumber: $buildNumber');
         if (maxBuild > buildNumber) {
           _upgrade(context, lastRelease.url, lastRelease.clog, force,
               lastRelease.version);

@@ -125,7 +125,6 @@ class _IndexPageState extends State<IndexPage> with ScreenUtil {
 
   BottomNavigationBarItem _buildBottomNavItem(
       Icon icon, Icon activeIcon, String name, bool noBadge) {
-    double height = setWidth(48), width = setWidth(48);
     return BottomNavigationBarItem(
         icon: ValueListenableBuilder(
           valueListenable: hasNewMessage,
