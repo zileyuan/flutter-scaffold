@@ -465,12 +465,10 @@ packages:
   umeng_analytics_push:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: d5810d1c2410e068572c63642ccc03d4b553cf37
-      url: "https://github.com/zileyuan/umeng_analytics_push.git"
-    source: git
-    version: "0.0.1"
+      name: umeng_analytics_push
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.1"
   url_launcher:
     dependency: "direct main"
     description:
