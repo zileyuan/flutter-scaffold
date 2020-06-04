@@ -13,6 +13,7 @@
 
 ## 其它集成的包
 
+- Websocket: web_socket_channel(<https://github.com/dart-lang/web_socket_channel>)
 - 权限请求: permission_handler(<https://github.com/Baseflow/flutter-permission-handler>)
 - 通知权限请求: notification_permissions(<https://github.com/Vanethos/flutter_notification_permissions>)
 - web组件: webview_flutter(<https://github.com/flutter/plugins/tree/master/packages/webview_flutter>)

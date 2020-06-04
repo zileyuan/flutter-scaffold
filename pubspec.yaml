@@ -67,6 +67,8 @@ dependencies:
   badges: ^1.1.1
   # 微信插件
   fluwx: ^2.1.0
+  # Websocket
+  web_socket_channel: ^1.1.0
   # 友盟分析推送
   umeng_analytics_push:
     git:
