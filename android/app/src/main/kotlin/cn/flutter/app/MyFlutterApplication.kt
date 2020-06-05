@@ -7,6 +7,6 @@ class MyFlutterApplication: FlutterApplication() {
     override fun onCreate() {
         super.onCreate();
         UmengAnalyticsPushFlutterAndroid.androidInit(this, "app_id", "default",
-                false, "push_id")
+                false, "push_id", false)
     }
 }

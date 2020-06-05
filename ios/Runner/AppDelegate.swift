@@ -9,7 +9,7 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     UmengAnalyticsPushFlutterIos.iosInit(launchOptions, appkey:"app_id", channel:"appstore",
-    logEnabled:false);
+    logEnabled:false, pushEnabled:false);
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }

@@ -52,9 +52,9 @@ dependencies:
   # 网络请求
   dio: ^3.0.9
   # 获取路径
-  path_provider: ^1.6.9
+  path_provider: ^1.6.10
   # 读取包信息
-  package_info: ^0.4.0+18
+  package_info: ^0.4.1
   # 检查和请求iOs和Android的权限
   permission_handler: ^5.0.0+hotfix.8
   # 请求通知权限
@@ -70,7 +70,7 @@ dependencies:
   # Websocket
   web_socket_channel: ^1.1.0
   # 友盟分析推送
-  umeng_analytics_push: ^1.0.1
+  umeng_analytics_push: ^1.0.6
 
 dev_dependencies:
   flutter_test:
