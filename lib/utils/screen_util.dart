@@ -23,18 +23,18 @@ mixin ScreenUtil {
   }
 
   ///当前设备高度 dp
-  double get screenHeightDp => util.ScreenUtil.screenHeightDp;
-
-  double get screenWidthDp => util.ScreenUtil.screenWidthDp;
-
-  ///当前设备宽度 px
-  double get screenWidth => util.ScreenUtil.screenWidth;
-
-  ///当前设备高度 px
   double get screenHeight => util.ScreenUtil.screenHeight;
 
+  double get screenWidth => util.ScreenUtil.screenWidth;
+
+  ///当前设备宽度 px
+  double get screenWidthPx => util.ScreenUtil.screenWidthPx;
+
+  ///当前设备高度 px
+  double get screenHeightPx => util.ScreenUtil.screenHeightPx;
+
   ///状态栏高度 刘海屏会更高
-  int get statusBarHeight => util.ScreenUtil.statusBarHeight.toInt();
+  double get statusBarHeight => util.ScreenUtil.statusBarHeight;
 
   ///底部安全区距离
   double get bottomBarHeight => util.ScreenUtil.bottomBarHeight;

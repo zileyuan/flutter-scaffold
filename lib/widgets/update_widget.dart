@@ -196,11 +196,12 @@ class _UpdateWidgetState extends State<UpdateWidget> with ScreenUtil {
                                                 await requestPermissions();
                                             if (reqPerm) {
                                               num++;
-                                              int id = await RUpgrade.upgrade(
+                                              await RUpgrade.upgrade(
                                                   widget._updateURL,
-                                                  apkName: 'mobile-ms.apk');
+                                                  notificationVisibility: NotificationVisibility.VISIBILITY_HIDDEN,
+                                                  isAutoRequestInstall: true,
+                                                  fileName: 'mobile-update.apk');
                                               num = 1;
-                                              await RUpgrade.install(id);
                                             } else {
                                               ToastUtil.show('需授权访问存储，才可在线更新');
                                             }
