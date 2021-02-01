@@ -1,0 +1,39 @@
+{
+  "common": {
+    "appName": "My App"
+  },
+  "splash": {
+    "slogan": "Intelligent Trustworthy"
+  },
+  "index": {
+    "home": "Home",
+    "page2": "Page2",
+    "page3": "Page3",
+    "account": "Mine",
+    "existHint": "Are you sure you want to quit?",
+    "existCancel": "Cancel",
+    "existComfirm": "Quit"
+  },
+  "home": {
+    "name": "Home"
+  },
+  "page2": {
+    "name": "Page2"
+  },
+  "page3": {
+    "name": "Page3"
+  },
+  "account": {
+    "name": "Mine",
+    "login": {
+      "name": "登录"
+    }
+  },
+  "update": {
+    "newVersion": "New version found",
+    "downloading": "Downloading...",
+    "next": "Next",
+    "needPermission": "Need to authorize access to storage before online upgrade",
+    "updateNow": "Upgrade now"
+  }
+}

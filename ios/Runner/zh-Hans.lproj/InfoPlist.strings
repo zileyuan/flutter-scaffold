@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Runner
+
+  Created by Zach Yuan on 2020/11/5.
+  
+*/
+"CFBundleName" = "我的应用";
+"NSBluetoothAlwaysUsageDescription" = "APP需要使用蓝牙进行数据通讯";
+"NSBluetoothPeripheralUsageDescription" = "App需要访问蓝牙来控制设备";
+"NSLocationWhenInUseUsageDescription" = "APP需要搜索蓝牙时访问位置信息";

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:app/utils/screen_util.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:app/routers/app_router.dart';
-import 'package:app/stores/user_notifier.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -16,11 +16,7 @@ class _SplashPageState extends State<SplashPage> with ScreenUtil {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       Rx.timer(0, Duration(milliseconds: 2000)).listen((_) {
-        if (!UserNotifier.isLogin()) {
-          AppRouter.navigateTo(context, Routes.indexPage, replace: true);
-        } else {
-          AppRouter.navigateTo(context, Routes.loginPage, replace: true);
-        }
+        AppRouter.navigateTo(context, Routes.indexPage, replace: true);
       });
     });
   }
@@ -35,15 +31,18 @@ class _SplashPageState extends State<SplashPage> with ScreenUtil {
             SizedBox(
               height: setHeight(1000),
             ),
-            Image.asset(
-              'assets/images/logo.png',
-              width: setWidth(130),
-              height: setWidth(130),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(setWidth(8)),
+              child: Image.asset(
+                'assets/images/logo.png',
+                width: setWidth(130),
+                height: setWidth(130),
+              ),
             ),
             SizedBox(
               height: setHeight(20),
             ),
-            Text('你，值得拥有！',
+            Text('splash.slogan'.tr(),
                 style: TextStyle(
                   fontSize: setSp(28),
                 )),

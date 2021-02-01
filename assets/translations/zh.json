@@ -1,0 +1,36 @@
+{
+  "common": {
+    "appName": "我的应用"
+  },
+  "splash": {
+    "slogan": "智能科技 值得信赖"
+  },
+  "index": {
+    "home": "首页",
+    "page2": "页面2",
+    "page3": "页面3",
+    "account": "我的"
+  },
+  "home": {
+    "name": "首页"
+  },
+  "page2": {
+    "name": "页面2"
+  },
+  "page3": {
+    "name": "页面3"
+  },
+  "account": {
+    "name": "我的",
+    "login": {
+      "name": "登录"
+    }
+  },
+  "update": {
+    "newVersion": "发现新版本",
+    "downloading": "正在下载...",
+    "next": "下次提醒",
+    "needPermission": "需授权访问存储，才可在线升级",
+    "updateNow": "立刻升级"
+  }
+}

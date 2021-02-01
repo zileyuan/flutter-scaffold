@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Text('LoginPage'),
+        child: Text('account.login.name'.tr()),
       ),
     );
   }

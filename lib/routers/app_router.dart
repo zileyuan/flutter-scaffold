@@ -8,7 +8,7 @@ export 'route.dart';
 class AppRouter {
   AppRouter._();
 
-  static Router router;
+  static FluroRouter router;
 
   static Future navigateTo(BuildContext context, String path,
       {bool replace = false,

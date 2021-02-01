@@ -4,13 +4,11 @@ import 'dart:io';
 import 'package:app/stores/index_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:app/themes/dart_theme.dart';
-import 'package:app/themes/light_theme.dart';
 import 'package:provider/provider.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import 'package:app/routers/app_router.dart';
 import 'package:app/stores/user_notifier.dart';
-import 'package:app/stores/ui_notifier.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,11 +18,15 @@ void main() {
     runApp(
       MultiProvider(
         providers: [
-          ChangeNotifierProvider.value(value: UINotifier()),
           ChangeNotifierProvider.value(value: UserNotifier()),
           ChangeNotifierProvider.value(value: IndexNotifier()),
         ],
-        child: MyApp(),
+        child: EasyLocalization(
+            supportedLocales: [Locale('en'), Locale('zh')],
+            path: 'assets/translations', // <-- change patch to your
+            fallbackLocale: Locale('en'),
+            child: MyApp()
+        ),
       ),
     );
   });
@@ -58,15 +60,13 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<UINotifier>(builder: (context, uiNotifier, child) {
-      return MaterialApp(
-        themeMode: UINotifier.themeMode,
-        title: 'App',
-        debugShowCheckedModeBanner: false,
-        theme: LightTheme.get(),
-        darkTheme: DarkTheme.get(),
-        onGenerateRoute: AppRouter.router.generator,
-      );
-    });
+    return MaterialApp(
+      title: 'common.appName'.tr(),
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: AppRouter.router.generator,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+    );
   }
 }

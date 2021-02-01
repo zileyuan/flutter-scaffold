@@ -12,6 +12,7 @@ import 'package:app/stores/index_notifier.dart';
 import 'package:badges/badges.dart';
 import 'package:app/widgets/confirm_dialog.dart';
 import 'package:notification_permissions/notification_permissions.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class IndexPage extends StatefulWidget {
   @override
@@ -43,19 +44,19 @@ class _IndexPageState extends State<IndexPage> with ScreenUtil {
       ..add(_buildBottomNavItem(Icon(IconfontUtil.icon_job, size: setSp(52),),
           Icon(IconfontUtil.icon_job, size: setSp(52), color: Colors
               .redAccent,),
-          '首页', true))
+          'index.home'.tr(), true))
       ..add(_buildBottomNavItem(Icon(IconfontUtil.icon_check, size: setSp(52),),
           Icon(IconfontUtil.icon_check, size: setSp(52), color: Colors
               .redAccent,),
-          '页面2', true))
+          'index.page2'.tr(), true))
       ..add(_buildBottomNavItem(Icon(IconfontUtil.icon_msg, size: setSp(52),),
           Icon(IconfontUtil.icon_msg, size: setSp(52), color: Colors
               .redAccent,),
-          '页面3', false))
+          'index.page3'.tr(), false))
       ..add(_buildBottomNavItem(Icon(IconfontUtil.icon_mine, size: setSp(52),),
           Icon(IconfontUtil.icon_mine, size: setSp(52), color: Colors
               .redAccent,),
-          '我的', true));
+          'index.account'.tr(), true));
     return tabs;
   }
 
@@ -67,9 +68,9 @@ class _IndexPageState extends State<IndexPage> with ScreenUtil {
             context: context,
             builder: (BuildContext context) {
               return ConfirmDialog(
-                text: '通知权限没打开，将不能收到通知！',
-                cancelText: '暂不打开',
-                defineText: '立即设置',
+                text: 'index.existHint'.tr(),
+                cancelText: 'index.existCancel'.tr(),
+                defineText: 'index.existComfirm'.tr(),
               );
             });
         if (result) {
@@ -139,8 +140,8 @@ class _IndexPageState extends State<IndexPage> with ScreenUtil {
               ),
               child: icon,
               showBadge: noBadge ? false : hasNewMessage.value,
-              position: BadgePosition.topRight(
-                  top: setWidth(-18), right: setWidth(-25)),
+              position: BadgePosition.topEnd(
+                  top: setWidth(-18), end: setWidth(-25)),
               padding: EdgeInsets.all(setWidth(8)),
             );
           },
@@ -157,9 +158,9 @@ class _IndexPageState extends State<IndexPage> with ScreenUtil {
         context: context,
         builder: (BuildContext context) {
           return ConfirmDialog(
-            text: '您确定是要退出么',
-            cancelText: '继续使用',
-            defineText: '确定退出',
+            text: 'index.existHint'.tr(),
+            cancelText: 'index.existCancel'.tr(),
+            defineText: 'index.existComfirm'.tr(),
           );
         });
   }

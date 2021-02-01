@@ -12,7 +12,7 @@ class Routes {
   static String loginPage = '/loginPage';
 
   static void configureRoutes() {
-    final router = Router();
+    final router = FluroRouter();
     AppRouter.router = router;
 
     router.notFoundHandler = new Handler(

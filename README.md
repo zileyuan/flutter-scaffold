@@ -26,4 +26,4 @@
 - 读取包信息: package_info(<https://github.com/flutter/plugins/tree/master/packages/package_info>)
 - 通用工具类包: common_utils(<https://github.com/Sky24n/common_utils>)
 - 角标徽章: badges(<https://github.com/yako-dev/flutter_badges>)
-- 微信插件: fluwx(<https://github.com/OpenFlutter/fluwx>)
+- 多国语言: easy_localization(<https://github.com/aissat/easy_localization>)

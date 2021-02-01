@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app/utils/screen_util.dart';
 
-showLoading(BuildContext context, {text = "加载中..."}) {
+showLoading(BuildContext context, {text: String}) {
   showDialog(
       context: context,
       barrierDismissible: false,

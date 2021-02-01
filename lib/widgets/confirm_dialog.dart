@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app/stores/ui_notifier.dart';
 import 'package:app/utils/screen_util.dart';
 
 class ConfirmDialog extends Dialog with ScreenUtil {
@@ -11,7 +10,8 @@ class ConfirmDialog extends Dialog with ScreenUtil {
       {Key key,
         @required this.text,
         @required this.cancelText,
-        @required this.defineText})
+        @required this.defineText,
+      })
       : super(key: key);
 
   @override
@@ -20,56 +20,69 @@ class ConfirmDialog extends Dialog with ScreenUtil {
       type: MaterialType.transparency,
       child: Center(
         child: Container(
-          width: setWidth(500),
-          height: setWidth(450),
+          width: setWidth(550),
+          height: setWidth(280),
           decoration: BoxDecoration(
-              color: UINotifier.isDarkMode(context)? Colors.grey[800] : Color(0xFFFFFFFF),
+              color: Color(0xFFFFFFFF),
               borderRadius:
-              BorderRadius.circular(setWidth(24))),
+              BorderRadius.circular(setWidth(8))),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
-                  margin: EdgeInsets.only(
-                      left: setWidth(80),
-                      top: setWidth(24),
-                      right: setWidth(80)),
-                  child: Image.asset(
-                    "assets/images/index_you_no_see.png",
-                    width: setWidth(135),
-                    height: setWidth(135),
-                  )),
-              Container(
                 alignment: Alignment.topCenter,
                 margin: EdgeInsets.only(
-                    left: setWidth(80),
-                    top: setWidth(33),
-                    right: setWidth(80),
-                    bottom: setWidth(40)),
+                    left: setWidth(60),
+                    top: setWidth(40),
+                    right: setWidth(60),
+                    bottom: setWidth(60)),
                 child: Text(text,
-                    textAlign: TextAlign.center,
+//                    textAlign: TextAlign.center,
                     style: TextStyle(
-//                        color: Color(0xFF333333),
-                        fontSize: setSp(32),
-                        fontWeight: FontWeight.bold)),
+                        fontSize: setSp(30),
+                        color: Color(0xFF333333),
+                        fontWeight: FontWeight.w500)),
               ),
               Container(
                 width: double.infinity,
-                height: setWidth(68),
-                margin:
-                EdgeInsets.only(bottom: setWidth(40)),
+                margin: EdgeInsets.only(bottom: setWidth(40)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                      width: setWidth(164),
-                      height: setWidth(68),
+                      width: setWidth(200),
+                      height: setWidth(60),
                       decoration: BoxDecoration(
-                          color: Theme.of(context).buttonColor,
+                          border: Border.all(
+                              color: Color(0xFFcccccc),
+                              width: setWidth(1)),
                           borderRadius: BorderRadius.all(Radius.circular(
-                              setWidth(10)))),
+                              setWidth(8)))),
+                      child: FlatButton(
+                        padding: EdgeInsets.only(
+                            left: setWidth(20),
+                            right: setWidth(20)),
+                        child: Text(
+                          cancelText,
+                          style: TextStyle(
+                              color: Color(0xFF666666),
+                              fontSize: setSp(26)),
+                        ),
+                        onPressed: () => Navigator.pop(context, false),
+                      ),
+                    ),
+                    Container(
+                      width: setWidth(200),
+                      height: setWidth(60),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF036EB8),
+                          border: Border.all(
+                              color: Color(0xFF036EB8),
+                              width: setWidth(1)),
+                          borderRadius: BorderRadius.all(Radius.circular(
+                              setWidth(8)))),
                       child: FlatButton(
                         padding: EdgeInsets.only(
                             left: setWidth(20),
@@ -78,36 +91,14 @@ class ConfirmDialog extends Dialog with ScreenUtil {
                           defineText,
                           style: TextStyle(
                               color: Color(0xFFFFFFFF),
-                              fontSize: setSp(28)),
-                        ),
-                        onPressed: () => Navigator.pop(context, true),
-                      ),
-                    ),
-                    Container(
-                      width: setWidth(164),
-                      height: setWidth(68),
-                      decoration: BoxDecoration(
-                          color: Color(0xFFFFFFFF),
-                          border: Border.all(
-                              color: Color(0xFF999999),
-                              width: setWidth(1)),
-                          borderRadius: BorderRadius.all(Radius.circular(
-                              setWidth(10)))),
-                      child: FlatButton(
-                        padding: EdgeInsets.only(
-                            left: setWidth(20),
-                            right: setWidth(20)),
-                        child: Text(
-                          cancelText,
-                          style: TextStyle(
-                              color: Color(0xFF999999),
-                              fontSize: setSp(28)),
+                              fontSize: setSp(26)),
                         ),
                         onPressed: () {
-                          Navigator.pop(context, false);
+                          Navigator.pop(context, true);
                         },
                       ),
                     ),
+
                   ],
                 ),
               )

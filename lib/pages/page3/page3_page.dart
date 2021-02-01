@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Page3Page extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _Page3PageState extends State<Page3Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Text('Page3Page'),
+        child: Text('page3.name'.tr()),
       ),
     );
   }
