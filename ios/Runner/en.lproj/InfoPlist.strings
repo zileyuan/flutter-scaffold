@@ -6,6 +6,3 @@
   
 */
 "CFBundleName" = "My App";
-"NSBluetoothAlwaysUsageDescription" = "APP needs to use Bluetooth for data communication";
-"NSBluetoothPeripheralUsageDescription" = "App needs to access Bluetooth to control the device";
-"NSLocationWhenInUseUsageDescription" = "App needs to access location information when searching for Bluetooth";
