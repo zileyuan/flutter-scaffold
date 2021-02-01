@@ -12,7 +12,10 @@
     "account": "Mine",
     "existHint": "Are you sure you want to quit?",
     "existCancel": "Cancel",
-    "existComfirm": "Quit"
+    "existComfirm": "Quit",
+    "notifHint": "Notification permission is turned off, you will not be able to receive notifications!",
+    "notifCancel": "Not open",
+    "notifComfirm": "Setup now"
   },
   "home": {
     "name": "Home"

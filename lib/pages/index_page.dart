@@ -68,9 +68,9 @@ class _IndexPageState extends State<IndexPage> with ScreenUtil {
             context: context,
             builder: (BuildContext context) {
               return ConfirmDialog(
-                text: 'index.existHint'.tr(),
-                cancelText: 'index.existCancel'.tr(),
-                defineText: 'index.existComfirm'.tr(),
+                text: 'index.notifHint'.tr(),
+                cancelText: 'index.notifCancel'.tr(),
+                defineText: 'index.notifComfirm'.tr(),
               );
             });
         if (result) {

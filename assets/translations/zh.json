@@ -9,7 +9,13 @@
     "home": "首页",
     "page2": "页面2",
     "page3": "页面3",
-    "account": "我的"
+    "account": "我的",
+    "existHint": "您确定是要退出么?",
+    "existCancel": "继续使用",
+    "existComfirm": "确定退出",
+    "notifHint": "通知权限没打开，将不能收到通知！",
+    "notifCancel": "暂不打开",
+    "notifComfirm": "立即设置"
   },
   "home": {
     "name": "首页"
